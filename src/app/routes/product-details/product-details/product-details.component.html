@@ -1,0 +1,54 @@
+
+<div class="container mt-5" *ngIf="productDetails() as product">
+  <h1 class="text-center">Document Details</h1>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      General Information
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Title: {{product.title}}</h5>
+      <p class="card-text">STI Type: {{product.stiType}}</p>
+      <p class="card-text">Distribution: {{product.distribution}}</p>
+      <p class="card-text">Distribution Date: {{product.distributionDate | date: 'MM/dd/yyyy'}}</p>
+      <p class="card-text">Submitted Date: {{product.submittedDate | date: 'MM/dd/yyyy'}}</p>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      Copyright Information
+    </div>
+    <div class="card-body">
+      <p class="card-text">License Type: {{product.copyright.licenseType}}</p>
+      <p class="card-text">Contains Third Party Material: {{product.copyright.containsThirdPartyMaterial}}</p>
+      <!-- Add more fields here -->
+    </div>
+  </div>
+
+ <!--  <div class="card mt-4">
+    <div class="card-header">
+      Author Affiliations
+    </div>
+    <div class="card-body">
+      <p class="card-text">Author: {{product.authorAffiliations?.meta?.author}}</p>
+      <p class="card-text">Organization: General Electric (United States)</p>
+      <p class="card-text">Location: Boston, Massachusetts, United States</p>
+    </div>
+  </div>
+ -->
+  <div class="card mt-4">
+    <div class="card-header">
+      Abstract
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        The structural materials and potential failure modes for high technology aircraft gas turbine bearings are reviewed...
+        <!-- Truncated for brevity -->
+      </p>
+    </div>
+  </div>
+
+  <!-- Add more cards for other sections -->
+
+</div>
